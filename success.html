@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZionBrowser v2.0 - Download Your Purchase</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0a0f;color:#e0e0e0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{max-width:600px;width:100%;text-align:center}
+.card{background:#12121a;border:2px solid #1a1a2e;border-radius:16px;padding:40px;margin-bottom:20px}
+.card.success{border-color:#00ff88}
+.card.error{border-color:#ff4444}
+.card.loading{border-color:#00ccff}
+h1{font-size:1.8rem;margin-bottom:15px}
+.success h1{color:#00ff88}
+.error h1{color:#ff4444}
+.loading h1{color:#00ccff}
+p{color:#888;margin-bottom:12px;line-height:1.6}
+.spinner{display:inline-block;width:40px;height:40px;border:3px solid #1a1a2e;border-top-color:#00ccff;border-radius:50%;animation:spin 1s linear infinite;margin:20px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn{display:inline-block;padding:16px 40px;font-size:1.1rem;font-weight:700;border-radius:8px;border:none;cursor:pointer;text-decoration:none;margin:8px;transition:transform .2s}
+.btn:hover{transform:scale(1.05);text-decoration:none}
+.btn-download{background:linear-gradient(135deg,#00ff88,#00cc66);color:#000}
+.btn-retry{background:#333;color:#fff}
+.info{background:#0d0d12;border:1px solid #1a1a2e;border-radius:8px;padding:15px;margin:15px 0;text-align:left;font-size:.85rem}
+.info strong{color:#00ccff;display:block;margin-bottom:5px}
+.info code{color:#00ff88;word-break:break-all}
+.footer{color:#555;font-size:.75rem;margin-top:20px}
+.footer a{color:#00ff88}
+.hidden{display:none}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- LOADING STATE -->
+  <div id="state-loading" class="card loading">
+    <div class="spinner"></div>
+    <h1>Verifying Payment...</h1>
+    <p>Please wait while we confirm your payment with Stripe.</p>
+  </div>
+
+  <!-- SUCCESS STATE -->
+  <div id="state-success" class="card success hidden">
+    <h1>Payment Confirmed!</h1>
+    <p>Thank you for purchasing ZionBrowser v2.0.</p>
+    <div class="info">
+      <strong>Order Details</strong>
+      <p>Product: ZionBrowser v2.0 - AI Agent Browser Toolkit</p>
+      <p>Email: <code id="customer-email">—</code></p>
+      <p>Downloads remaining: <code id="downloads-remaining">5</code></p>
+    </div>
+    <a id="download-btn" href="#" class="btn btn-download">Download ZionBrowser-v2.0.zip</a>
+    <p style="margin-top:15px;font-size:.85rem;color:#888">Your download link is valid for 72 hours (max 5 downloads).<br>Save this page or bookmark it.</p>
+    <div class="info" style="margin-top:20px">
+      <strong>Quick Start</strong>
+      <p>1. Extract the ZIP file</p>
+      <p>2. Run: <code>python3 setup.py</code></p>
+      <p>3. Use: <code>zion get https://example.com</code></p>
+      <p>4. Interactive: <code>zion i</code></p>
+      <p>5. Security: <code>pirate scan</code></p>
+    </div>
+  </div>
+
+  <!-- ERROR STATE -->
+  <div id="state-error" class="card error hidden">
+    <h1>Verification Issue</h1>
+    <p id="error-message">We couldn't verify your payment. This may be a temporary issue.</p>
+    <button class="btn btn-retry" onclick="retryVerification()">Try Again</button>
+    <p style="margin-top:15px;font-size:.85rem">If the problem persists, email <strong>standardbitcoin.io@gmail.com</strong> with your payment receipt and we'll send the download manually.</p>
+  </div>
+
+  <!-- CRYPTO VERIFICATION STATE -->
+  <div id="state-crypto" class="card loading hidden">
+    <h1>Verify Crypto Payment</h1>
+    <p>Enter your transaction details to verify payment and get your download.</p>
+    <div style="text-align:left;margin:20px 0">
+      <label style="color:#00ccff;font-size:.85rem">Email</label>
+      <input id="crypto-email" type="email" placeholder="your@email.com" style="width:100%;padding:10px;background:#0d0d12;border:1px solid #333;border-radius:6px;color:#e0e0e0;margin:5px 0 15px;font-size:.95rem">
+      <label style="color:#00ccff;font-size:.85rem">Blockchain</label>
+      <select id="crypto-chain" style="width:100%;padding:10px;background:#0d0d12;border:1px solid #333;border-radius:6px;color:#e0e0e0;margin:5px 0 15px;font-size:.95rem">
+        <option value="SOL">Solana (SOL)</option>
+        <option value="ETH">Ethereum (ETH)</option>
+        <option value="BTC">Bitcoin (BTC)</option>
+      </select>
+      <label style="color:#00ccff;font-size:.85rem">Transaction Hash</label>
+      <input id="crypto-tx" type="text" placeholder="Transaction hash / signature" style="width:100%;padding:10px;background:#0d0d12;border:1px solid #333;border-radius:6px;color:#e0e0e0;margin:5px 0 15px;font-size:.95rem;font-family:monospace">
+      <label style="color:#00ccff;font-size:.85rem">Order ID (from payment page)</label>
+      <input id="crypto-order" type="text" placeholder="Order ID" style="width:100%;padding:10px;background:#0d0d12;border:1px solid #333;border-radius:6px;color:#e0e0e0;margin:5px 0 15px;font-size:.95rem;font-family:monospace">
+    </div>
+    <button class="btn btn-download" onclick="verifyCrypto()">Verify & Download</button>
+    <p id="crypto-status" style="margin-top:10px;font-size:.85rem;color:#888"></p>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2026 Padrao Bitcoin Atividades de Internet LTDA | <a href="mailto:standardbitcoin.io@gmail.com">Support</a></p>
+  </div>
+</div>
+
+<script>
+const API_BASE = window.location.origin;
+const params = new URLSearchParams(window.location.search);
+const sessionId = params.get('session_id');
+const mode = params.get('mode');
+
+function show(id) {
+  document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+
+async function verifyStripePayment() {
+  if (!sessionId) {
+    if (mode === 'crypto') {
+      show('state-crypto');
+      return;
+    }
+    show('state-error');
+    document.getElementById('error-message').textContent = 'No payment session found. If you paid via crypto, click the button below.';
+    return;
+  }
+
+  try {
+    const resp = await fetch(`${API_BASE}/api/verify-payment`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ session_id: sessionId })
+    });
+
+    const data = await resp.json();
+
+    if (data.success && data.downloadToken) {
+      show('state-success');
+      document.getElementById('customer-email').textContent = data.email || '—';
+      document.getElementById('download-btn').href = `${API_BASE}/api/download?token=${data.downloadToken}`;
+    } else {
+      show('state-error');
+      document.getElementById('error-message').textContent = data.error || 'Payment verification failed.';
+    }
+  } catch (err) {
+    show('state-error');
+    document.getElementById('error-message').textContent = 'Connection error. Please try again.';
+  }
+}
+
+async function verifyCrypto() {
+  const email = document.getElementById('crypto-email').value;
+  const chain = document.getElementById('crypto-chain').value;
+  const txHash = document.getElementById('crypto-tx').value;
+  const orderId = document.getElementById('crypto-order').value;
+  const status = document.getElementById('crypto-status');
+
+  if (!email || !txHash || !orderId) {
+    status.style.color = '#ff4444';
+    status.textContent = 'Please fill all fields.';
+    return;
+  }
+
+  status.style.color = '#00ccff';
+  status.textContent = 'Verifying on-chain... Please wait.';
+
+  try {
+    const resp = await fetch(`${API_BASE}/api/crypto-verify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ orderId, email, chain, txHash })
+    });
+
+    const data = await resp.json();
+
+    if (data.success && data.downloadToken) {
+      show('state-success');
+      document.getElementById('customer-email').textContent = email;
+      document.getElementById('download-btn').href = `${API_BASE}/api/download?token=${data.downloadToken}`;
+    } else if (data.status === 'pending') {
+      status.style.color = '#ffd700';
+      status.textContent = 'Transaction found but not confirmed yet. Wait a few minutes and try again.';
+    } else {
+      status.style.color = '#ff4444';
+      status.textContent = data.error || 'Verification failed. Check your transaction hash.';
+    }
+  } catch (err) {
+    status.style.color = '#ff4444';
+    status.textContent = 'Connection error. Try again.';
+  }
+}
+
+function retryVerification() {
+  show('state-loading');
+  setTimeout(verifyStripePayment, 1000);
+}
+
+// Auto-start verification
+if (sessionId) {
+  verifyStripePayment();
+} else if (mode === 'crypto') {
+  show('state-crypto');
+} else {
+  show('state-crypto');
+}
+</script>
+
+</body>
+</html>

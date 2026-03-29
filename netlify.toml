@@ -1,0 +1,46 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Block direct access to private files
+[[redirects]]
+  from = "/private/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# API routes
+[[redirects]]
+  from = "/api/verify-payment"
+  to = "/.netlify/functions/verify-payment"
+  status = 200
+
+[[redirects]]
+  from = "/api/download"
+  to = "/.netlify/functions/download"
+  status = 200
+
+[[redirects]]
+  from = "/api/crypto-order"
+  to = "/.netlify/functions/crypto-order"
+  status = 200
+
+[[redirects]]
+  from = "/api/crypto-verify"
+  to = "/.netlify/functions/crypto-verify"
+  status = 200
+
+[[redirects]]
+  from = "/api/webhook"
+  to = "/.netlify/functions/webhook"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

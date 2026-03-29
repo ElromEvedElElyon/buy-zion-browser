@@ -331,12 +331,17 @@ footer a{color:var(--accent)}
   <div class="buy-section">
     <h3 style="color:var(--text);margin:25px 0 15px">Choose Your Payment Method:</h3>
 
+    <!-- STRIPE — Primary (auto-delivery) -->
+    <a href="https://buy.stripe.com/dRm9AS0Vu3hegERaLb0x20j" class="buy-btn btn-paypal" style="background:linear-gradient(135deg,#635bff,#4b45c6);font-size:1.3rem;padding:18px 50px">Pay with Card - $9.99</a>
+    <p style="color:var(--accent);margin:8px 0;font-size:.85rem">Instant download after payment. Visa, Mastercard, Amex, Apple Pay, Google Pay.</p>
+
     <!-- PayPal -->
-    <a href="https://www.paypal.com/paypalme/PadraoBitcoin/9.99" target="_blank" class="buy-btn btn-paypal">Pay with PayPal - $9.99</a>
-    <br>
+    <a href="https://www.paypal.com/paypalme/PadraoBitcoin/9.99" target="_blank" class="buy-btn btn-paypal" style="margin-top:15px">Pay with PayPal - $9.99</a>
+    <p style="color:var(--dim);margin:5px 0;font-size:.8rem">After PayPal payment, email your receipt to standardbitcoin.io@gmail.com for download link.</p>
 
     <!-- Crypto -->
-    <p style="color:var(--dim);margin:20px 0 10px">Or pay with Crypto (send exactly $9.99 equivalent):</p>
+    <p style="color:var(--accent2);margin:25px 0 10px;font-weight:700">Pay with Crypto (auto-verified on-chain):</p>
+    <p style="color:var(--dim);margin-bottom:15px;font-size:.85rem">Send exactly $9.99 equivalent. After sending, <a href="success.html?mode=crypto" style="color:var(--accent)">click here to verify your transaction</a> and get instant download.</p>
 
     <div class="wallet-box">
       <strong>Bitcoin (BTC)</strong>
@@ -355,9 +360,8 @@ footer a{color:var(--accent)}
     <div class="wallet-box">
       <strong>PIX (Brazil) - R$54.90</strong>
       <code>standardbitcoin.io@gmail.com</code>
+      <p style="margin-top:5px;color:#888;font-size:.8rem">After PIX, email receipt to standardbitcoin.io@gmail.com</p>
     </div>
-
-    <p style="color:var(--accent);margin-top:20px;font-size:.9rem">After payment, email <strong>standardbitcoin.io@gmail.com</strong> with your payment receipt. You'll receive the download link within 24 hours.</p>
   </div>
 </div>
 </section>
@@ -365,12 +369,12 @@ footer a{color:var(--accent)}
 <!-- DELIVERY INFO -->
 <section class="delivery">
 <div class="container">
-  <h3 style="color:var(--accent2);margin-bottom:10px">How Delivery Works</h3>
-  <p>1. Complete payment using any method above.<br>
-  2. Send your payment receipt to <strong>standardbitcoin.io@gmail.com</strong><br>
-  3. Receive your download link (ZIP with all 6 modules + docs) within 24h.<br>
-  4. Extract, run <code>python3 setup.py</code>, and you're ready.</p>
+  <h3 style="color:var(--accent2);margin-bottom:10px">Instant Automated Delivery</h3>
+  <p><strong style="color:var(--accent)">Card payments (Stripe):</strong> Download starts immediately after payment. No waiting.<br>
+  <strong style="color:var(--accent)">Crypto payments:</strong> Verify your transaction on-chain and download instantly.<br>
+  <strong style="color:var(--accent)">PayPal / PIX:</strong> Email your receipt for manual delivery within 24h.</p>
   <p style="margin-top:15px;color:var(--dim)"><strong>Requirements:</strong> Python 3.6+ | Any OS (Linux, macOS, Windows) | No external packages needed</p>
+  <p style="margin-top:10px;color:var(--dim)"><strong>Package includes:</strong> ZionBrowser-v2.0.zip (59KB) with all 6 modules, pipeline templates, and installer.</p>
 </div>
 </section>
 
@@ -405,20 +409,31 @@ footer a{color:var(--accent)}
     <p>By purchasing and/or using this software, the buyer <strong>VOLUNTARILY, KNOWINGLY, AND IRREVOCABLY WAIVES</strong> the following rights to the maximum extent permitted by applicable law:</p>
     <ol>
       <li><strong>Judicial proceedings:</strong> Any and all rights to file lawsuits, legal actions, or judicial proceedings of any kind against the seller, developer, company, or any affiliated parties related to this software.</li>
-      <li><strong>Extrajudicial disputes:</strong> Any and all rights to initiate extrajudicial claims, complaints, disputes, arbitration, mediation, or any other form of non-judicial dispute resolution.</li>
       <li><strong>Class actions:</strong> Any right to participate in class action lawsuits, consolidated proceedings, or representative actions.</li>
       <li><strong>Regulatory complaints:</strong> Any right to file complaints with consumer protection agencies, trade commissions, or other regulatory bodies specifically regarding this purchase.</li>
-      <li><strong>Chargeback/payment disputes:</strong> Any right to initiate payment chargebacks, payment disputes, or payment reversals through any payment processor, bank, or financial institution. Initiating a chargeback constitutes breach of these terms.</li>
+      <li><strong>Chargeback/payment disputes:</strong> Any right to initiate payment chargebacks, payment disputes, or payment reversals through any payment processor, bank, or financial institution. Initiating a chargeback constitutes breach of these terms and the buyer shall be liable for the original amount plus all fees and costs incurred.</li>
     </ol>
 
-    <h3>5. LIMITATION OF LIABILITY</h3>
-    <p>Under no circumstances shall Padrao Bitcoin Atividades de Internet LTDA (CNPJ: 51.148.891/0001-69), its owner, developers, agents, affiliates, or representatives be liable for any damages whatsoever, including without limitation: direct, indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to damages for loss of profits, goodwill, data, or other intangible losses, arising out of or in connection with the use or inability to use this software. <strong>Total liability is limited to $0.00 (zero dollars).</strong></p>
+    <h3>5. BINDING ARBITRATION CLAUSE</h3>
+    <p><strong>Any and all disputes, controversies, or claims</strong> arising out of or relating to this purchase, these terms, the software, or the relationship between the parties, including but not limited to disputes regarding the existence, validity, interpretation, performance, breach, or termination of these terms, <strong>SHALL BE RESOLVED EXCLUSIVELY AND FINALLY BY BINDING ARBITRATION</strong>, to the exclusion of any judicial or extrajudicial proceedings.</p>
+    <ol>
+      <li><strong>Arbitration institution:</strong> The arbitration shall be administered by the <strong>Brazil-Canada Chamber of Commerce (CCBC)</strong>, or alternatively by any arbitration chamber agreed upon by both parties, under its then-current rules and procedures.</li>
+      <li><strong>Seat of arbitration:</strong> The seat of arbitration shall be the Federative Republic of Brazil.</li>
+      <li><strong>Language:</strong> The arbitration proceedings shall be conducted in English or Portuguese, at the discretion of the arbitrator.</li>
+      <li><strong>Number of arbitrators:</strong> The dispute shall be resolved by a <strong>sole arbitrator</strong> appointed in accordance with the rules of the chosen arbitration institution.</li>
+      <li><strong>Applicable law:</strong> The arbitrator shall apply the substantive laws of the Federative Republic of Brazil, specifically the Brazilian Civil Code (Lei n. 10.406/2002) and the Brazilian Arbitration Law (Lei n. 9.307/1996, as amended by Lei n. 13.129/2015).</li>
+      <li><strong>Costs:</strong> The <strong>losing party</strong> shall bear all arbitration costs, including the arbitrator's fees, administrative costs, and reasonable attorney's fees of the prevailing party.</li>
+      <li><strong>Finality:</strong> The arbitral award shall be <strong>final and binding</strong> upon both parties with no right of appeal, except as permitted under the Brazilian Arbitration Law. The award may be enforced in any court of competent jurisdiction worldwide under the New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards (1958).</li>
+      <li><strong>Waiver of class/collective arbitration:</strong> The buyer agrees that any arbitration shall be conducted <strong>on an individual basis only</strong>. There shall be no right to arbitrate any dispute on a class, collective, representative, or consolidated basis.</li>
+      <li><strong>Confidentiality:</strong> All arbitration proceedings, documents, evidence, and awards shall be kept strictly confidential by both parties.</li>
+      <li><strong>Maximum liability cap:</strong> Notwithstanding any arbitral determination, the maximum aggregate liability of the seller under any circumstance shall not exceed the <strong>amount actually paid by the buyer for the software</strong> (i.e., $9.99 USD).</li>
+    </ol>
 
-    <h3>6. INDEMNIFICATION</h3>
+    <h3>6. LIMITATION OF LIABILITY</h3>
+    <p>Under no circumstances shall Padrao Bitcoin Atividades de Internet LTDA (CNPJ: 51.148.891/0001-69), its owner, developers, agents, affiliates, or representatives be liable for any damages whatsoever, including without limitation: direct, indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to damages for loss of profits, goodwill, data, or other intangible losses, arising out of or in connection with the use or inability to use this software. <strong>Maximum aggregate liability is limited to the purchase price paid ($9.99 USD).</strong></p>
+
+    <h3>7. INDEMNIFICATION</h3>
     <p>The buyer agrees to indemnify, defend, and hold harmless the seller and all affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from the buyer's use of the software or breach of these terms.</p>
-
-    <h3>7. GOVERNING LAW</h3>
-    <p>These terms are governed by the laws of the Federative Republic of Brazil. Any dispute that survives the waivers above shall be subject to the exclusive jurisdiction of the courts of Sao Paulo, SP, Brazil.</p>
 
     <h3>8. INTELLECTUAL PROPERTY</h3>
     <p>This software is licensed, not sold. You receive a personal, non-transferable, non-exclusive license to use the software. You may NOT: redistribute, resell, sublicense, reverse engineer, decompile, share, upload to public repositories, or make the source code available to any third party. Violation of these terms results in immediate license termination with no refund.</p>
@@ -427,12 +442,12 @@ footer a{color:var(--accent)}
     <p><strong>Seller:</strong> Padrao Bitcoin Atividades de Internet LTDA<br>
     <strong>CNPJ:</strong> 51.148.891/0001-69<br>
     <strong>Contact:</strong> standardbitcoin.io@gmail.com<br>
-    <strong>Location:</strong> Sao Paulo, SP, Brazil</p>
+    <strong>Jurisdiction:</strong> Federative Republic of Brazil</p>
 
     <h3>10. ACCEPTANCE</h3>
-    <p>Completing a payment for this software constitutes full, irrevocable acceptance of all terms and conditions stated herein. These terms are binding and enforceable. If you do not agree with any of these terms, DO NOT PURCHASE this software.</p>
+    <p>Completing a payment for this software constitutes full, irrevocable acceptance of all terms and conditions stated herein, including the binding arbitration clause. These terms are binding and enforceable. If you do not agree with any of these terms, DO NOT PURCHASE this software.</p>
 
-    <div class="warning">PURCHASING = FULL ACCEPTANCE OF ALL TERMS ABOVE</div>
+    <div class="warning">PURCHASING = FULL ACCEPTANCE OF ALL TERMS INCLUDING BINDING ARBITRATION</div>
 
   </div>
 </div>
@@ -452,20 +467,20 @@ footer a{color:var(--accent)}
       <p>~3-5MB for the browser core. ~10MB with the full security suite. Compare to Firefox at 500MB+.</p>
     </div>
     <div class="card">
-      <h3>Is this a GUI browser?</h3>
-      <p>No. It's a CLI (command-line) browser designed for developers, AI agents, and automation. It includes a Chrome DevTools integration for JavaScript-heavy sites.</p>
+      <h3>How do I receive the software?</h3>
+      <p><strong>Card payments:</strong> Instant automatic download after Stripe checkout. <strong>Crypto:</strong> Verify your transaction on-chain for instant download. <strong>PayPal/PIX:</strong> Email receipt for manual delivery.</p>
     </div>
     <div class="card">
       <h3>Can I use it with Claude Code / ChatGPT?</h3>
       <p>Yes! ZionAgent provides a clean Python API designed specifically for AI agent integration, including MCP server support.</p>
     </div>
     <div class="card">
-      <h3>How do I receive the software?</h3>
-      <p>After payment, email your receipt to standardbitcoin.io@gmail.com. You'll receive a download link within 24 hours.</p>
+      <h3>Is this a GUI browser?</h3>
+      <p>No. CLI browser for developers, AI agents, and automation. Includes Chrome DevTools integration for JavaScript-heavy sites when needed.</p>
     </div>
     <div class="card">
       <h3>Can I get a refund?</h3>
-      <p>No. This is beta software sold as-is. All sales are final. No refunds, no exceptions. Please read the full terms before purchasing.</p>
+      <p>No. Beta software, all sales final. No refunds, no exceptions, no chargebacks. Any dispute resolved exclusively by binding arbitration. Read full terms before purchasing.</p>
     </div>
   </div>
 </div>
@@ -476,8 +491,8 @@ footer a{color:var(--accent)}
 <div class="container">
   <h2 style="color:var(--gold);font-size:2rem;margin-bottom:15px">Get ZionBrowser v2.0 Today</h2>
   <p style="color:var(--dim);margin-bottom:20px">6 modules. 5,982 lines of code. ~5MB RAM. ZERO dependencies. $9.99.</p>
-  <a href="#buy" class="buy-btn btn-paypal" style="font-size:1.3rem;padding:18px 50px">BUY NOW - $9.99</a>
-  <p style="color:var(--dim);margin-top:15px;font-size:.85rem">Beta price. Will increase to $29.99+ after beta period.</p>
+  <a href="https://buy.stripe.com/dRm9AS0Vu3hegERaLb0x20j" class="buy-btn btn-paypal" style="font-size:1.3rem;padding:18px 50px;background:linear-gradient(135deg,#635bff,#4b45c6)">BUY NOW - $9.99</a>
+  <p style="color:var(--dim);margin-top:15px;font-size:.85rem">Instant download. Beta price. Will increase to $29.99+ after beta.</p>
 </div>
 </section>
 
