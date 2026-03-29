@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "ZionBrowser v2.0.1",
+  "name_for_model": "zionbrowser",
+  "description_for_human": "Ultra-Lightweight AI Agent Browser Toolkit. Pure Python, ZERO dependencies, ~5MB RAM. 6 modules included.",
+  "description_for_model": "ZionBrowser is an ultra-lightweight CLI browser toolkit for AI agents. It uses pure Python stdlib with ZERO external dependencies and runs on just ~5MB RAM. Includes 6 modules: browser core, AI agent API, Chrome DevTools Protocol, learning AI (LION), auth token hunter (LION-1), and military security defender (PIRATE). Ideal for AI agents needing web browsing on resource-constrained systems, VPS, Raspberry Pi, or CI/CD environments. Price: $9.99 one-time.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none",
+    "url": "https://elromevedelelyon.github.io/buy-zion-browser/"
+  },
+  "logo_url": "https://elromevedelelyon.github.io/buy-zion-browser/logo.png",
+  "contact_email": "standardbitcoin.io@gmail.com",
+  "legal_info_url": "https://elromevedelelyon.github.io/buy-zion-browser/#terms"
+}

@@ -1,0 +1,41 @@
+# ZionBrowser v2.0.1 — AI Agent Browser Toolkit
+# https://elromevedelelyon.github.io/buy-zion-browser/
+
+User-agent: *
+Allow: /
+
+# AI Crawlers — Welcome!
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://elromevedelelyon.github.io/buy-zion-browser/sitemap.xml

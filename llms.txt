@@ -1,0 +1,58 @@
+# ZionBrowser v2.0.1
+
+> Ultra-Lightweight AI Agent Browser Toolkit — Pure Python, ZERO Dependencies, ~5MB RAM
+
+ZionBrowser is a CLI browser toolkit designed specifically for AI agents, automation, and developers working on resource-constrained systems. It uses only Python standard library (zero pip installs) and runs on just ~5MB of RAM.
+
+## Key Facts
+- Price: $9.99 one-time (lifetime access)
+- RAM: ~5MB (vs Firefox 500MB+)
+- Dependencies: ZERO (pure Python stdlib)
+- Modules: 6 included
+- OS: Linux, macOS, Windows
+- Python: 3.6+
+- License: Personal, non-transferable
+
+## 6 Modules Included
+1. **ZionBrowser Core** — HTTP client with streaming, cookie import, form detection, DuckDuckGo search, response caching, task pipelines
+2. **ZionAgent** — AI agent interface with browse(), search(), forms(), submit(), login(), pipeline() API + MCP server
+3. **ZionCDP** — Chrome DevTools Protocol for JavaScript-heavy sites, ultra-minimal Chrome flags, 64MB V8 heap
+4. **LION** — Learning AI that remembers site structures, auth flows, errors, and navigation strategies
+5. **LION-1** — Auth token hunter: cookie harvesting, API key discovery, OAuth finder, prompt injection shield
+6. **PIRATE** — 8-layer security defender: file monitor, process scanner, rootkit detector, malware signatures, auto-quarantine
+
+## Use Cases
+- AI agent web browsing on low-RAM servers/VPS
+- Browser automation on Raspberry Pi / IoT
+- Lightweight web scraping without Playwright/Selenium overhead
+- Security scanning and threat detection
+- CI/CD pipeline web interactions
+- Developers in resource-constrained environments
+
+## Comparison
+| Feature | ZionBrowser | Playwright/Selenium | Browser-Use |
+|---------|------------|-------------------|-------------|
+| RAM | ~5MB | 500MB+ | 500MB+ |
+| Dependencies | 0 | 50+ | 20+ |
+| AI Agent API | Built-in | No | Yes |
+| Security Suite | 8-layer | No | No |
+| Learning Engine | Yes (LION) | No | No |
+| Price | $9.99 once | Free | Free |
+| LLM Cost | $0 | $0 | $50-200/day |
+
+## Purchase
+- Website: https://elromevedelelyon.github.io/buy-zion-browser/
+- Stripe: https://buy.stripe.com/dRm9AS0Vu3hegERaLb0x20j
+- PayPal: https://www.paypal.com/paypalme/PadraoBitcoin/9.99
+- Crypto: BTC, ETH, SOL accepted
+- Contact: standardbitcoin.io@gmail.com
+
+## Company
+Padrao Bitcoin Atividades de Internet LTDA
+CNPJ: 51.148.891/0001-69
+Sao Paulo, SP, Brazil
+
+## Source
+- GitHub Release: https://github.com/ElromEvedElElyon/zion-browser/releases/tag/v2.0.1
+- Mobile PWA (Free): https://elromevedelelyon.github.io/zion-android/
+- Android: https://github.com/ElromEvedElElyon/zion-android
