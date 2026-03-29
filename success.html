@@ -54,6 +54,10 @@ p{color:#888;margin-bottom:12px;line-height:1.6}
     </div>
     <a id="download-btn" href="#" class="btn btn-download">Download ZionBrowser-v2.0.zip</a>
     <p style="margin-top:15px;font-size:.85rem;color:#888">Your download link is valid for 72 hours (max 5 downloads).<br>Save this page or bookmark it.</p>
+    <div class="info" style="margin-top:15px;border-color:#ffd700">
+      <strong style="color:#ffd700">Alternative Download</strong>
+      <p>If the button above doesn't work, email your payment receipt to <strong>standardbitcoin.io@gmail.com</strong> and we'll send the download link within 24 hours.</p>
+    </div>
     <div class="info" style="margin-top:20px">
       <strong>Quick Start</strong>
       <p>1. Extract the ZIP file</p>
@@ -140,7 +144,7 @@ async function verifyStripePayment() {
     }
   } catch (err) {
     show('state-error');
-    document.getElementById('error-message').textContent = 'Connection error. Please try again.';
+    document.getElementById('error-message').innerHTML = 'Automatic verification temporarily unavailable.<br><br><strong>To get your download:</strong><br>Email your Stripe payment receipt to <strong>standardbitcoin.io@gmail.com</strong> and we will send the download link within 24 hours.<br><br>We apologize for the inconvenience.';
   }
 }
 
