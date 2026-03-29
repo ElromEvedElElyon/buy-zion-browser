@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
-const DOWNLOAD_SECRET = process.env.DOWNLOAD_SECRET || 'zion-padrao-bitcoin-dl-2026';
+const DOWNLOAD_SECRET = process.env.DOWNLOAD_SECRET;
 
 const HEADERS = {
   'Access-Control-Allow-Origin': '*',

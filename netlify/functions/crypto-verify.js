@@ -11,7 +11,7 @@ const WALLETS = {
 
 const PRICE_USD = 9.99;
 const TOLERANCE = 0.15; // 15% tolerance for price fluctuation
-const DOWNLOAD_SECRET = process.env.DOWNLOAD_SECRET || 'zion-padrao-bitcoin-dl-2026';
+const DOWNLOAD_SECRET = process.env.DOWNLOAD_SECRET;
 
 const HEADERS = {
   'Access-Control-Allow-Origin': '*',
