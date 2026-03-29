@@ -100,7 +100,7 @@ p{color:#888;margin-bottom:12px;line-height:1.6}
 </div>
 
 <script>
-const API_BASE = window.location.origin;
+const API_BASE = 'https://www.sintex.ai';
 const params = new URLSearchParams(window.location.search);
 const sessionId = params.get('session_id');
 const mode = params.get('mode');
@@ -122,7 +122,7 @@ async function verifyStripePayment() {
   }
 
   try {
-    const resp = await fetch(`${API_BASE}/api/verify-payment`, {
+    const resp = await fetch(`${API_BASE}/api/zion/verify`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ session_id: sessionId })
@@ -133,7 +133,7 @@ async function verifyStripePayment() {
     if (data.success && data.downloadToken) {
       show('state-success');
       document.getElementById('customer-email').textContent = data.email || '—';
-      document.getElementById('download-btn').href = `${API_BASE}/api/download?token=${data.downloadToken}`;
+      document.getElementById('download-btn').href = `${API_BASE}/api/zion/download?token=${data.downloadToken}`;
     } else {
       show('state-error');
       document.getElementById('error-message').textContent = data.error || 'Payment verification failed.';
@@ -161,7 +161,7 @@ async function verifyCrypto() {
   status.textContent = 'Verifying on-chain... Please wait.';
 
   try {
-    const resp = await fetch(`${API_BASE}/api/crypto-verify`, {
+    const resp = await fetch(`${API_BASE}/api/zion/crypto-verify`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ orderId, email, chain, txHash })
@@ -172,7 +172,7 @@ async function verifyCrypto() {
     if (data.success && data.downloadToken) {
       show('state-success');
       document.getElementById('customer-email').textContent = email;
-      document.getElementById('download-btn').href = `${API_BASE}/api/download?token=${data.downloadToken}`;
+      document.getElementById('download-btn').href = `${API_BASE}/api/zion/download?token=${data.downloadToken}`;
     } else if (data.status === 'pending') {
       status.style.color = '#ffd700';
       status.textContent = 'Transaction found but not confirmed yet. Wait a few minutes and try again.';
