@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZionBrowser v2.0 - Ultra-Lightweight AI Agent Browser Toolkit | $9.99</title>
+<meta name="description" content="ZionBrowser: Pure Python CLI browser for AI agents. ZERO dependencies, ~5MB RAM. 6 powerful modules: Browser, Agent, CDP, LION AI, Hunter, Military Defender. Only $9.99.">
+<meta name="keywords" content="AI browser, CLI browser, lightweight browser, AI agent toolkit, Python browser, MCP browser, zero dependency browser, low RAM browser, security toolkit">
+<meta property="og:title" content="ZionBrowser v2.0 - AI Agent Browser Toolkit">
+<meta property="og:description" content="Pure Python CLI browser. ZERO deps. ~5MB RAM. 6 modules. AI-powered browsing, learning, security. $9.99">
+<meta property="og:type" content="product">
+<meta property="og:url" content="https://elromevedelelyon.github.io/buy-zion-browser/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ZionBrowser v2.0 - $9.99">
+<meta name="twitter:description" content="AI Agent Browser Toolkit. Pure Python. ZERO deps. ~5MB RAM. 6 powerful modules.">
+<link rel="canonical" href="https://elromevedelelyon.github.io/buy-zion-browser/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#12121a;--accent:#00ff88;--accent2:#00ccff;--text:#e0e0e0;--dim:#888;--danger:#ff4444;--gold:#ffd700;--border:#1a1a2e}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:60px 0 40px;text-align:center;background:linear-gradient(135deg,#0a0a1a 0%,#0f1a0f 50%,#0a0a1a 100%);border-bottom:1px solid var(--border)}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
+.hero .tagline{font-size:1.2rem;color:var(--dim);margin-bottom:20px}
+.hero .price-hero{font-size:3rem;font-weight:900;color:var(--gold);margin:20px 0}
+.hero .price-hero span{font-size:1rem;color:var(--dim);text-decoration:line-through;margin-right:10px}
+.hero .badge{display:inline-block;background:var(--danger);color:#fff;padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:700;margin:5px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
+.stats{display:flex;justify-content:center;gap:30px;margin-top:25px;flex-wrap:wrap}
+.stats div{text-align:center}
+.stats .num{font-size:1.8rem;font-weight:900;color:var(--accent)}
+.stats .label{font-size:.8rem;color:var(--dim);text-transform:uppercase}
+
+/* BETA BANNER */
+.beta-banner{background:linear-gradient(90deg,#332200,#1a1100);border:2px solid var(--gold);padding:15px;text-align:center;margin:30px auto;max-width:900px;border-radius:8px}
+.beta-banner h3{color:var(--gold);margin-bottom:5px}
+.beta-banner p{color:var(--dim);font-size:.9rem}
+
+/* MODULES */
+.modules{padding:50px 0}
+.modules h2{text-align:center;font-size:2rem;margin-bottom:30px;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:25px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card h3{color:var(--accent2);margin-bottom:8px;font-size:1.1rem}
+.card .icon{font-size:1.5rem;margin-bottom:10px}
+.card p{color:var(--dim);font-size:.9rem}
+.card ul{margin-top:10px;padding-left:18px}
+.card ul li{color:var(--dim);font-size:.85rem;margin-bottom:4px}
+
+/* FEATURES */
+.features{padding:40px 0;background:var(--card)}
+.features h2{text-align:center;font-size:2rem;margin-bottom:25px;color:var(--accent2)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;max-width:900px;margin:0 auto}
+.feat{padding:15px;border:1px solid var(--border);border-radius:8px;text-align:center}
+.feat strong{color:var(--accent);display:block;margin-bottom:5px}
+.feat span{color:var(--dim);font-size:.85rem}
+
+/* COMPARISON */
+.compare{padding:50px 0}
+.compare h2{text-align:center;font-size:2rem;margin-bottom:25px;color:var(--accent)}
+.compare table{width:100%;max-width:700px;margin:0 auto;border-collapse:collapse}
+.compare th,.compare td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.compare th{color:var(--accent2);font-weight:700}
+.compare td:first-child{color:var(--dim)}
+.compare .yes{color:var(--accent);font-weight:700}
+.compare .no{color:var(--danger)}
+
+/* CODE DEMO */
+.demo{padding:40px 0;background:var(--card)}
+.demo h2{text-align:center;font-size:2rem;margin-bottom:20px;color:var(--accent2)}
+.code{background:#0d0d12;border:1px solid var(--border);border-radius:8px;padding:20px;max-width:700px;margin:0 auto;font-family:'Fira Code',monospace;font-size:.9rem;overflow-x:auto;color:var(--accent)}
+.code .comment{color:#555}
+.code .cmd{color:var(--accent2)}
+
+/* PRICING */
+.pricing{padding:50px 0;text-align:center}
+.pricing h2{font-size:2.5rem;margin-bottom:10px;color:var(--gold)}
+.pricing .sub{color:var(--dim);margin-bottom:30px;font-size:1.1rem}
+.price-box{background:linear-gradient(135deg,#0f1a0f,#1a1a0f);border:2px solid var(--gold);border-radius:16px;padding:40px;max-width:500px;margin:0 auto}
+.price-box .amount{font-size:4rem;font-weight:900;color:var(--gold)}
+.price-box .amount small{font-size:1.2rem;color:var(--dim)}
+.price-box .was{color:var(--dim);text-decoration:line-through;margin-bottom:15px}
+.price-box .includes{text-align:left;margin:20px 0;padding:0 20px}
+.price-box .includes li{color:var(--text);margin-bottom:8px;list-style:none}
+.price-box .includes li::before{content:"+ ";color:var(--accent);font-weight:700}
+
+/* BUY BUTTONS */
+.buy-section{margin-top:30px}
+.buy-btn{display:inline-block;padding:16px 40px;font-size:1.2rem;font-weight:800;border-radius:8px;margin:8px;cursor:pointer;border:none;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.buy-btn:hover{transform:scale(1.05);text-decoration:none;box-shadow:0 0 20px rgba(0,255,136,.3)}
+.btn-paypal{background:linear-gradient(135deg,#0070ba,#003087);color:#fff}
+.btn-crypto{background:linear-gradient(135deg,#f7931a,#ff6600);color:#fff}
+.btn-eth{background:linear-gradient(135deg,#627eea,#3c3c3d);color:#fff}
+.btn-sol{background:linear-gradient(135deg,#9945ff,#14f195);color:#fff}
+.btn-pix{background:linear-gradient(135deg,#32bcad,#0d8f7f);color:#fff}
+
+.wallet-box{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:15px;margin:10px auto;max-width:600px;text-align:left;font-size:.8rem;word-break:break-all}
+.wallet-box strong{color:var(--accent2);display:block;margin-bottom:5px}
+.wallet-box code{color:var(--accent);font-family:monospace}
+
+/* DELIVERY */
+.delivery{padding:30px 0;text-align:center}
+.delivery p{color:var(--dim);max-width:600px;margin:0 auto}
+.delivery strong{color:var(--accent)}
+
+/* LEGAL */
+.legal{padding:40px 0;background:#080810;border-top:2px solid var(--danger)}
+.legal h2{text-align:center;color:var(--danger);font-size:1.8rem;margin-bottom:20px}
+.legal-box{background:var(--card);border:2px solid var(--danger);border-radius:12px;padding:30px;max-width:800px;margin:0 auto}
+.legal-box h3{color:var(--gold);margin:15px 0 8px}
+.legal-box p,.legal-box li{color:var(--dim);font-size:.9rem;margin-bottom:8px}
+.legal-box ol{padding-left:20px}
+.legal-box .warning{background:rgba(255,68,68,.1);border:1px solid var(--danger);padding:12px;border-radius:8px;margin:15px 0;color:var(--danger);font-weight:700;text-align:center}
+
+/* FOOTER */
+footer{padding:30px 0;text-align:center;border-top:1px solid var(--border);color:var(--dim);font-size:.8rem}
+footer a{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero h1{font-size:1.8rem}
+  .hero .price-hero{font-size:2.2rem}
+  .stats{gap:15px}
+  .buy-btn{display:block;margin:8px auto;max-width:300px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+  <span class="badge">BETA RELEASE</span>
+  <span class="badge">LIMITED LAUNCH PRICE</span>
+  <h1>ZionBrowser v2.0</h1>
+  <p class="tagline">Ultra-Lightweight AI Agent Browser Toolkit</p>
+  <p class="tagline">Pure Python. ZERO Dependencies. ~5MB RAM.</p>
+  <div class="price-hero"><span>$29.99</span> $9.99</div>
+  <p style="color:var(--dim)">One-time payment. Lifetime access. 6 powerful modules.</p>
+  <div class="stats">
+    <div><div class="num">5,982</div><div class="label">Lines of Code</div></div>
+    <div><div class="num">6</div><div class="label">Modules</div></div>
+    <div><div class="num">~5MB</div><div class="label">RAM Usage</div></div>
+    <div><div class="num">0</div><div class="label">Dependencies</div></div>
+  </div>
+</div>
+</section>
+
+<!-- BETA BANNER -->
+<div class="container">
+<div class="beta-banner">
+  <h3>BETA SOFTWARE - EARLY ADOPTER PRICING</h3>
+  <p>This is beta software sold at a heavily discounted price. By purchasing, you accept all terms below including no refunds and assumption of all risk. Price will increase to $29.99+ after beta period.</p>
+</div>
+</div>
+
+<!-- 6 MODULES -->
+<section class="modules">
+<div class="container">
+  <h2>6 Powerful Modules Included</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">1.</div>
+      <h3>ZionBrowser Core</h3>
+      <p>Ultra-lightweight CLI browser that runs on just ~5MB of RAM.</p>
+      <ul>
+        <li>HTTP client with streaming responses</li>
+        <li>Firefox cookie import (no re-login needed)</li>
+        <li>Smart form detection + CSRF extraction</li>
+        <li>DuckDuckGo search built-in</li>
+        <li>Response caching + bookmarks</li>
+        <li>Interactive mode + API server</li>
+        <li>Task pipeline engine (multi-step automation)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="icon">2.</div>
+      <h3>ZionAgent - AI Interface</h3>
+      <p>Clean API for Claude Code, OpenAI, and any AI agent to browse the web.</p>
+      <ul>
+        <li>Dict-based returns for LLM parsing</li>
+        <li>browse(), search(), forms(), submit()</li>
+        <li>login(), screenshot(), pipeline()</li>
+        <li>MCP (Model Context Protocol) server</li>
+        <li>Multi-session support</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="icon">3.</div>
+      <h3>ZionCDP - Chrome DevTools</h3>
+      <p>WebSocket-based Chrome DevTools Protocol integration for JavaScript-heavy sites.</p>
+      <ul>
+        <li>Ultra-minimal Chrome flags for low RAM</li>
+        <li>128MB V8 heap limit, single-process</li>
+        <li>HTTP for 90% tasks, Chrome for SPAs</li>
+        <li>Cloudflare bypass capability</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="icon">4.</div>
+      <h3>LION - Learning AI Brain</h3>
+      <p>Autonomous learning agent that remembers everything about sites it visits.</p>
+      <ul>
+        <li>Auto-learns site structures & form fields</li>
+        <li>Auth flow memory (remembers logins)</li>
+        <li>Error memory with auto-solutions</li>
+        <li>Cookie intelligence database</li>
+        <li>Anti-bot detection awareness</li>
+        <li>Navigation strategy suggestions</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="icon">5.</div>
+      <h3>LION-1 - The Hunter</h3>
+      <p>Hunts and collects authentication resources across your entire machine.</p>
+      <ul>
+        <li>Cookie harvesting (Firefox, Chrome, all browsers)</li>
+        <li>API key & token discovery</li>
+        <li>OAuth token & session finder</li>
+        <li>Prompt injection shield</li>
+        <li>File integrity monitoring (HMAC)</li>
+        <li>Shadow backups of critical files</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="icon">6.</div>
+      <h3>PIRATE - Military Defender</h3>
+      <p>8-layer military-grade machine guardian running on ~10MB RAM.</p>
+      <ul>
+        <li>File monitor + process scanner</li>
+        <li>Network guardian + port sentinel</li>
+        <li>Rootkit detector + malware signatures</li>
+        <li>Auto-quarantine threats</li>
+        <li>System hardening automation</li>
+        <li>Counter-defense measures</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+<div class="container">
+  <h2>Why ZionBrowser?</h2>
+  <div class="feat-grid">
+    <div class="feat"><strong>~5MB RAM</strong><span>vs Firefox ~500MB+. Runs on any machine.</span></div>
+    <div class="feat"><strong>ZERO Dependencies</strong><span>Pure Python stdlib. pip install nothing.</span></div>
+    <div class="feat"><strong>AI-First Design</strong><span>Built for Claude Code, GPT, AI agents.</span></div>
+    <div class="feat"><strong>MCP Server</strong><span>Model Context Protocol ready.</span></div>
+    <div class="feat"><strong>Task Pipelines</strong><span>JSON-driven multi-step automation.</span></div>
+    <div class="feat"><strong>Security Suite</strong><span>8-layer defense + rootkit detection.</span></div>
+    <div class="feat"><strong>Cookie Import</strong><span>Transfer Firefox sessions instantly.</span></div>
+    <div class="feat"><strong>Learning Engine</strong><span>Remembers sites, forms, auth flows.</span></div>
+  </div>
+</div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="compare">
+<div class="container">
+  <h2>ZionBrowser vs. Traditional Browsers</h2>
+  <table>
+    <tr><th>Feature</th><th>ZionBrowser</th><th>Firefox/Chrome</th></tr>
+    <tr><td>RAM Usage</td><td class="yes">~5MB</td><td class="no">500MB+</td></tr>
+    <tr><td>External Dependencies</td><td class="yes">0</td><td class="no">Hundreds</td></tr>
+    <tr><td>AI Agent API</td><td class="yes">Built-in</td><td class="no">Requires extensions</td></tr>
+    <tr><td>MCP Server</td><td class="yes">Native</td><td class="no">N/A</td></tr>
+    <tr><td>Task Pipelines</td><td class="yes">JSON-driven</td><td class="no">N/A</td></tr>
+    <tr><td>Security Scanner</td><td class="yes">8-layer</td><td class="no">Basic</td></tr>
+    <tr><td>Learning Engine</td><td class="yes">LION AI</td><td class="no">N/A</td></tr>
+    <tr><td>Cookie Intelligence</td><td class="yes">Cross-browser</td><td class="no">Single browser</td></tr>
+    <tr><td>Price</td><td class="yes">$9.99 one-time</td><td class="no">Free (but heavy)</td></tr>
+  </table>
+</div>
+</section>
+
+<!-- CODE DEMO -->
+<section class="demo">
+<div class="container">
+  <h2>Quick Start</h2>
+  <div class="code">
+<span class="comment"># Install (takes 2 seconds)</span><br>
+<span class="cmd">$ python3 setup.py</span><br><br>
+<span class="comment"># Browse any page (~5MB RAM)</span><br>
+<span class="cmd">$ zion get https://example.com</span><br><br>
+<span class="comment"># Search the web</span><br>
+<span class="cmd">$ zion search "AI agent frameworks 2026"</span><br><br>
+<span class="comment"># Import your Firefox cookies</span><br>
+<span class="cmd">$ zion cookies import</span><br><br>
+<span class="comment"># Run automated task pipelines</span><br>
+<span class="cmd">$ zion pipe tasks/register.json</span><br><br>
+<span class="comment"># Start API server for AI agents</span><br>
+<span class="cmd">$ zion serve 8080</span><br><br>
+<span class="comment"># Security scan your machine</span><br>
+<span class="cmd">$ pirate scan</span><br><br>
+<span class="comment"># Hunt for auth tokens</span><br>
+<span class="cmd">$ lion1 hunt</span>
+  </div>
+</div>
+</section>
+
+<!-- PRICING + BUY -->
+<section class="pricing" id="buy">
+<div class="container">
+  <h2>Get ZionBrowser v2.0 Now</h2>
+  <p class="sub">Beta launch price. Lifetime access. All 6 modules included.</p>
+
+  <div class="price-box">
+    <div class="was">Regular Price: $29.99</div>
+    <div class="amount">$9<small>.99 USD</small></div>
+    <p style="color:var(--accent);font-weight:700;margin:10px 0">One-time payment. No subscription.</p>
+    <ul class="includes">
+      <li>ZionBrowser Core (CLI browser, ~5MB RAM)</li>
+      <li>ZionAgent (AI interface for LLMs)</li>
+      <li>ZionCDP (Chrome DevTools Protocol)</li>
+      <li>LION (Learning AI Brain)</li>
+      <li>LION-1 (Auth Token Hunter + Shield)</li>
+      <li>PIRATE (Military Security Defender)</li>
+      <li>Task Pipeline Templates</li>
+      <li>Lifetime updates during beta</li>
+    </ul>
+  </div>
+
+  <div class="buy-section">
+    <h3 style="color:var(--text);margin:25px 0 15px">Choose Your Payment Method:</h3>
+
+    <!-- PayPal -->
+    <a href="https://www.paypal.com/paypalme/PadraoBitcoin/9.99" target="_blank" class="buy-btn btn-paypal">Pay with PayPal - $9.99</a>
+    <br>
+
+    <!-- Crypto -->
+    <p style="color:var(--dim);margin:20px 0 10px">Or pay with Crypto (send exactly $9.99 equivalent):</p>
+
+    <div class="wallet-box">
+      <strong>Bitcoin (BTC)</strong>
+      <code>bc1qdj3flkqe7v3qwlfux5d5u3rja7ldm9gwywk9t2</code>
+    </div>
+    <div class="wallet-box">
+      <strong>Ethereum (ETH / ERC-20)</strong>
+      <code>0x6b45b26e1d59A832FE8c9E7c685C36Ea54A3F88B</code>
+    </div>
+    <div class="wallet-box">
+      <strong>Solana (SOL)</strong>
+      <code>CM42ofAFowySg72GjDuCchEkwwbwnhdSRYgztRCAAEzR</code>
+    </div>
+
+    <p style="color:var(--dim);margin:20px 0 10px">Brazilian PIX:</p>
+    <div class="wallet-box">
+      <strong>PIX (Brazil) - R$54.90</strong>
+      <code>standardbitcoin.io@gmail.com</code>
+    </div>
+
+    <p style="color:var(--accent);margin-top:20px;font-size:.9rem">After payment, email <strong>standardbitcoin.io@gmail.com</strong> with your payment receipt. You'll receive the download link within 24 hours.</p>
+  </div>
+</div>
+</section>
+
+<!-- DELIVERY INFO -->
+<section class="delivery">
+<div class="container">
+  <h3 style="color:var(--accent2);margin-bottom:10px">How Delivery Works</h3>
+  <p>1. Complete payment using any method above.<br>
+  2. Send your payment receipt to <strong>standardbitcoin.io@gmail.com</strong><br>
+  3. Receive your download link (ZIP with all 6 modules + docs) within 24h.<br>
+  4. Extract, run <code>python3 setup.py</code>, and you're ready.</p>
+  <p style="margin-top:15px;color:var(--dim)"><strong>Requirements:</strong> Python 3.6+ | Any OS (Linux, macOS, Windows) | No external packages needed</p>
+</div>
+</section>
+
+<!-- LEGAL DISCLAIMER -->
+<section class="legal" id="terms">
+<div class="container">
+  <h2>IMPORTANT: Terms of Purchase & Legal Disclaimer</h2>
+  <div class="legal-box">
+
+    <div class="warning">BY PURCHASING THIS SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO ALL TERMS BELOW. IF YOU DO NOT AGREE, DO NOT PURCHASE.</div>
+
+    <h3>1. BETA SOFTWARE - AS IS</h3>
+    <p>ZionBrowser v2.0 is <strong>BETA SOFTWARE</strong> provided strictly "AS IS" and "AS AVAILABLE" without any warranty of any kind, whether express, implied, statutory, or otherwise. This includes, but is not limited to, implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement. The software may contain bugs, errors, defects, and may not function as described or expected.</p>
+
+    <h3>2. ASSUMPTION OF RISK</h3>
+    <p>The buyer/user <strong>ASSUMES ALL RISK</strong> associated with the use, installation, and operation of this software. This includes but is not limited to:</p>
+    <ol>
+      <li>Risk of the software not functioning correctly or at all</li>
+      <li>Risk of data loss, corruption, or security vulnerabilities</li>
+      <li>Risk of incompatibility with your system or environment</li>
+      <li>Risk of financial loss arising from use of the software</li>
+      <li>Risk of system instability or performance degradation</li>
+      <li>Any direct, indirect, incidental, special, consequential, or exemplary damages</li>
+    </ol>
+
+    <h3>3. ABSOLUTELY NO REFUNDS</h3>
+    <p><strong>ALL SALES ARE FINAL.</strong> Due to the digital nature of this product and its beta status, there are <strong>NO REFUNDS, NO EXCHANGES, NO CREDITS</strong> under any circumstances whatsoever. This policy applies regardless of whether the software functions as expected, partially functions, or does not function at all. By completing your purchase, you irrevocably waive any right to request a refund, chargeback, or reversal of payment.</p>
+
+    <div class="warning">NO REFUNDS. NO EXCEPTIONS. ALL SALES FINAL.</div>
+
+    <h3>4. WAIVER OF LEGAL CLAIMS</h3>
+    <p>By purchasing and/or using this software, the buyer <strong>VOLUNTARILY, KNOWINGLY, AND IRREVOCABLY WAIVES</strong> the following rights to the maximum extent permitted by applicable law:</p>
+    <ol>
+      <li><strong>Judicial proceedings:</strong> Any and all rights to file lawsuits, legal actions, or judicial proceedings of any kind against the seller, developer, company, or any affiliated parties related to this software.</li>
+      <li><strong>Extrajudicial disputes:</strong> Any and all rights to initiate extrajudicial claims, complaints, disputes, arbitration, mediation, or any other form of non-judicial dispute resolution.</li>
+      <li><strong>Class actions:</strong> Any right to participate in class action lawsuits, consolidated proceedings, or representative actions.</li>
+      <li><strong>Regulatory complaints:</strong> Any right to file complaints with consumer protection agencies, trade commissions, or other regulatory bodies specifically regarding this purchase.</li>
+      <li><strong>Chargeback/payment disputes:</strong> Any right to initiate payment chargebacks, payment disputes, or payment reversals through any payment processor, bank, or financial institution. Initiating a chargeback constitutes breach of these terms.</li>
+    </ol>
+
+    <h3>5. LIMITATION OF LIABILITY</h3>
+    <p>Under no circumstances shall Padrao Bitcoin Atividades de Internet LTDA (CNPJ: 51.148.891/0001-69), its owner, developers, agents, affiliates, or representatives be liable for any damages whatsoever, including without limitation: direct, indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to damages for loss of profits, goodwill, data, or other intangible losses, arising out of or in connection with the use or inability to use this software. <strong>Total liability is limited to $0.00 (zero dollars).</strong></p>
+
+    <h3>6. INDEMNIFICATION</h3>
+    <p>The buyer agrees to indemnify, defend, and hold harmless the seller and all affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from the buyer's use of the software or breach of these terms.</p>
+
+    <h3>7. GOVERNING LAW</h3>
+    <p>These terms are governed by the laws of the Federative Republic of Brazil. Any dispute that survives the waivers above shall be subject to the exclusive jurisdiction of the courts of Sao Paulo, SP, Brazil.</p>
+
+    <h3>8. INTELLECTUAL PROPERTY</h3>
+    <p>This software is licensed, not sold. You receive a personal, non-transferable, non-exclusive license to use the software. You may NOT: redistribute, resell, sublicense, reverse engineer, decompile, share, upload to public repositories, or make the source code available to any third party. Violation of these terms results in immediate license termination with no refund.</p>
+
+    <h3>9. COMPANY INFORMATION</h3>
+    <p><strong>Seller:</strong> Padrao Bitcoin Atividades de Internet LTDA<br>
+    <strong>CNPJ:</strong> 51.148.891/0001-69<br>
+    <strong>Contact:</strong> standardbitcoin.io@gmail.com<br>
+    <strong>Location:</strong> Sao Paulo, SP, Brazil</p>
+
+    <h3>10. ACCEPTANCE</h3>
+    <p>Completing a payment for this software constitutes full, irrevocable acceptance of all terms and conditions stated herein. These terms are binding and enforceable. If you do not agree with any of these terms, DO NOT PURCHASE this software.</p>
+
+    <div class="warning">PURCHASING = FULL ACCEPTANCE OF ALL TERMS ABOVE</div>
+
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="modules" style="padding:40px 0">
+<div class="container">
+  <h2 style="color:var(--accent2)">Frequently Asked Questions</h2>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+    <div class="card">
+      <h3>What do I need to run it?</h3>
+      <p>Python 3.6+ on any OS. That's it. No pip install, no npm, no packages. Pure Python standard library.</p>
+    </div>
+    <div class="card">
+      <h3>How much RAM does it use?</h3>
+      <p>~3-5MB for the browser core. ~10MB with the full security suite. Compare to Firefox at 500MB+.</p>
+    </div>
+    <div class="card">
+      <h3>Is this a GUI browser?</h3>
+      <p>No. It's a CLI (command-line) browser designed for developers, AI agents, and automation. It includes a Chrome DevTools integration for JavaScript-heavy sites.</p>
+    </div>
+    <div class="card">
+      <h3>Can I use it with Claude Code / ChatGPT?</h3>
+      <p>Yes! ZionAgent provides a clean Python API designed specifically for AI agent integration, including MCP server support.</p>
+    </div>
+    <div class="card">
+      <h3>How do I receive the software?</h3>
+      <p>After payment, email your receipt to standardbitcoin.io@gmail.com. You'll receive a download link within 24 hours.</p>
+    </div>
+    <div class="card">
+      <h3>Can I get a refund?</h3>
+      <p>No. This is beta software sold as-is. All sales are final. No refunds, no exceptions. Please read the full terms before purchasing.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="padding:40px 0;text-align:center;background:linear-gradient(135deg,#0a1a0a,#1a1a0a)">
+<div class="container">
+  <h2 style="color:var(--gold);font-size:2rem;margin-bottom:15px">Get ZionBrowser v2.0 Today</h2>
+  <p style="color:var(--dim);margin-bottom:20px">6 modules. 5,982 lines of code. ~5MB RAM. ZERO dependencies. $9.99.</p>
+  <a href="#buy" class="buy-btn btn-paypal" style="font-size:1.3rem;padding:18px 50px">BUY NOW - $9.99</a>
+  <p style="color:var(--dim);margin-top:15px;font-size:.85rem">Beta price. Will increase to $29.99+ after beta period.</p>
+</div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Padrao Bitcoin Atividades de Internet LTDA | CNPJ: 51.148.891/0001-69</p>
+    <p style="margin-top:5px">Contact: <a href="mailto:standardbitcoin.io@gmail.com">standardbitcoin.io@gmail.com</a> | <a href="#terms">Terms of Purchase</a></p>
+    <p style="margin-top:10px;font-size:.7rem">ZionBrowser is beta software. All sales final. No refunds. User assumes all risk. See full terms above.</p>
+  </div>
+</footer>
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ZionBrowser v2.0",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Linux, macOS, Windows",
+  "description": "Ultra-Lightweight AI Agent Browser Toolkit. Pure Python, ZERO dependencies, ~5MB RAM. 6 modules: Browser, Agent API, Chrome DevTools, Learning AI, Auth Hunter, Security Defender.",
+  "offers": {
+    "@type": "Offer",
+    "price": "9.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Padrao Bitcoin Atividades de Internet LTDA",
+    "email": "standardbitcoin.io@gmail.com"
+  },
+  "softwareVersion": "2.0.0-beta",
+  "programmingLanguage": "Python",
+  "memoryRequirements": "5MB"
+}
+</script>
+
+</body>
+</html>
