@@ -1,0 +1,5 @@
+include:
+  - .well-known
+  - llms.txt
+  - llms-full.txt
+  - robots.txt
